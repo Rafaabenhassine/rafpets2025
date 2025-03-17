@@ -5,17 +5,17 @@ import { useNavigate } from "react-router-dom";
 import { addProduct } from "../JS/Actions/Actions";
 
 const AddProduct = () => {
-  const [Product, setProduct] = useState({id:Math.random()});
-  const navigate=useNavigate()
-  const dispatch=useDispatch()
+  const [Product, setProduct] = useState({ id: Math.random() });
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   console.log(Product);
   const handleChange = (e) => {
     setProduct({ ...Product, [e.target.name]: e.target.value });
   };
-  const handleClick=()=>{
-    dispatch(addProduct(Product))
-    navigate("/")
-  }
+  const handleClick = () => {
+    dispatch(addProduct(Product));
+    navigate("/");
+  };
   return (
     <div>
       <Form>
@@ -67,7 +67,7 @@ const AddProduct = () => {
           />
         </Form.Group>
 
-        <Button onClick={()=>handleClick()} variant="primary" type="submit">
+        <Button onClick={() => handleClick()} variant="primary" type="submit">
           Add Product
         </Button>
       </Form>

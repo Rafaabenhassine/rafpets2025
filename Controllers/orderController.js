@@ -39,12 +39,10 @@ exports.createOrder = async (req, res) => {
 
     res.status(201).json({ message: "Commande créée avec succès", order });
   } catch (err) {
-    res
-      .status(500)
-      .json({
-        message: "Erreur lors de la création de la commande",
-        error: err.message,
-      });
+    res.status(500).json({
+      message: "Erreur lors de la création de la commande",
+      error: err.message,
+    });
   }
 };
 
@@ -58,12 +56,10 @@ exports.getUserOrders = async (req, res) => {
 
     res.status(200).json(orders);
   } catch (err) {
-    res
-      .status(500)
-      .json({
-        message: "Erreur lors de la récupération des commandes",
-        error: err.message,
-      });
+    res.status(500).json({
+      message: "Erreur lors de la récupération des commandes",
+      error: err.message,
+    });
   }
 };
 
@@ -77,12 +73,10 @@ exports.getOrderById = async (req, res) => {
 
     res.status(200).json(order);
   } catch (err) {
-    res
-      .status(500)
-      .json({
-        message: "Erreur lors de la récupération de la commande",
-        error: err.message,
-      });
+    res.status(500).json({
+      message: "Erreur lors de la récupération de la commande",
+      error: err.message,
+    });
   }
 };
 
@@ -103,12 +97,10 @@ exports.updateOrderStatus = async (req, res) => {
       .status(200)
       .json({ message: "Statut de la commande mis à jour", order });
   } catch (err) {
-    res
-      .status(500)
-      .json({
-        message: "Erreur lors de la mise à jour de la commande",
-        error: err.message,
-      });
+    res.status(500).json({
+      message: "Erreur lors de la mise à jour de la commande",
+      error: err.message,
+    });
   }
 };
 
@@ -123,11 +115,9 @@ exports.deleteOrder = async (req, res) => {
     await order.remove();
     res.status(200).json({ message: "Commande supprimée avec succès" });
   } catch (err) {
-    res
-      .status(500)
-      .json({
-        message: "Erreur lors de la suppression de la commande",
-        error: err.message,
-      });
+    res.status(500).json({
+      message: "Erreur lors de la suppression de la commande",
+      error: err.message,
+    });
   }
 };
