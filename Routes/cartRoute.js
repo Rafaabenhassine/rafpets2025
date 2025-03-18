@@ -5,7 +5,7 @@ const {
   updateCart,
   removeFromCart,
   clearCart,
-} = require("../controllers/cartController");
+} = require("../Controllers/cartController");
 const router = express.Router();
 
 // Ajouter un produit au panier

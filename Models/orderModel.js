@@ -1,29 +1,28 @@
 //importation
-const mongoose=require("mongoose")
+const mongoose = require("mongoose");
 
 //create schema
 const schema = mongoose.Schema;
 
 const orderSchema = new schema({
-      
-    user:{
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "user",
+  },
+  products: [
+    {
+      product: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "user"
-    },
-    products:[
-        {
-            product:{
-                type: mongoose.Schema.Types.ObjectId,
-                ref:"product"
-            },
-            quntity:{
-                type: Number,
-            }
-        }
-    ],
-    totalPrice: {
+        ref: "product",
+      },
+      quntity: {
         type: Number,
-    }
+      },
+    },
+  ],
+  totalPrice: {
+    type: Number,
+  },
 });
 
 //export
