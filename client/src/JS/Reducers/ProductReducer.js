@@ -30,7 +30,7 @@ const initialState = {
       id: Math.random(),
       name: "Julius k9 Harnais IDC-POWER",
       description:
-        "Design innovant- Réfléchissant pour une sécurité dans l'obscurité - Tissu extérieur hydrofuge - Rembourrage intérieur confortable - Taille M - Coleur : Vert Militaire , Fushia  , Rouge",
+        "Design innovant- Réfléchissant pour une sécurité dans l'obscurité - Tissu extérieur hydrofuge - Rembourrage intérieur confortable - Taille M - Coleur : Vert Militaire , ",
 
       price: "120",
 
